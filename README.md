@@ -8,21 +8,17 @@ The goal is to simulate the movement of disks between three rods (A, B, and C), 
 
 The project structure is organized in a modular way, separating source files, headers, and tests to improve maintainability, readability, and scalability.
 
----
 
 ## Project Structure
 
 ```
-my-project/
-│
-├── src/        # Implementations (.cpp)
+/
 ├── include/    # Header files (.h)
+├── src/        # (empty) Implementation in headers
 ├── tests/      # Project tests
 ├── main.cpp    # Main file
 └── README.md   # Documentation
 ```
-
----
 
 ## Requirements
 
@@ -41,13 +37,13 @@ To compile and run this project, you need:
 In the terminal, at the project root, run:
 
 ```bash
-g++ main.cpp -o program
+g++ main.cpp -o hanoi
 ```
 
 If the project uses files inside `src/` and `include/`, use:
 
 ```bash
-g++ main.cpp src/*.cpp -Iinclude -o program
+g++ main.cpp src/*.cpp -Iinclude -o hanoi
 ```
 
 ### Execution
@@ -64,21 +60,19 @@ On Windows:
 program.exe
 ```
 
----
-
 ## Features
 
 The application implements the following requirements:
 
-* Receives the number of disks as input (minimum 1, maximum 10)
-* Initializes rod A with properly ordered disks (largest at the bottom, smallest at the top)
-* Solves the problem using recursion
+* Receives the number of disks as input (minimum 1, maximum 10);
+* Initializes rod A with properly ordered disks (largest at the bottom, smallest at the top);
+* Solves the problem using recursion;
+* Displays the total number of moves at the end;
 * Displays each move in the format:
   ```
   Move disk X from A to C
   A: [...]   B: [...]   C: [...]
   ```
-* Displays the total number of moves at the end
 
 ---
 
@@ -104,8 +98,6 @@ On Windows:
 test.exe
 ```
 
----
-
 ## Notes
 
 * Each rod is represented using a Stack (either `std::stack` or a custom implementation)
@@ -124,8 +116,6 @@ Additionally:
 * It naturally enforces valid moves
 * Prevents access to lower disks
 * Accurately represents the physical behavior of the rods
-
----
 
 ### 2. Is it possible to solve this problem without recursion? If so, how? If not, why?
 
