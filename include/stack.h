@@ -13,16 +13,14 @@ template <typename T>
 struct Stack {
     Node<T>* top;
     size_t count;
-    size_t max_size; // 0 significa sem limite
+    size_t max_size; 
 
-    // Inicializa a pilha com tamanho maximo (0 = sem limite)
     void init(size_t max) {
         top = nullptr;
         count = 0;
         max_size = max;
     }
 
-    // Libera todos os nos alocados
     void destroy() {
         Node<T>* current = top;
         while (current != nullptr) {
@@ -34,12 +32,10 @@ struct Stack {
         count = 0;
     }
 
-    // Verifica se a pilha esta vazia
     bool empty() {
         return count == 0;
     }
 
-    // Verifica se a pilha esta cheia
     bool is_full() {
         if (max_size == 0) {
             return false;
@@ -47,12 +43,10 @@ struct Stack {
         return count >= max_size;
     }
 
-    // Retorna a quantidade de elementos na pilha
     size_t size() {
         return count;
     }
 
-    // Insere elemento no topo
     bool push(T value) {
         if (is_full()) {
             return false;
@@ -64,7 +58,6 @@ struct Stack {
         return true;
     }
 
-    // Remove elemento do topo e salva em out_value
     bool pop(T* out_value) {
         if (empty()) {
             return false;
@@ -80,7 +73,6 @@ struct Stack {
         return true;
     }
 
-    // Retorna o elemento do topo sem remover
     bool peek(T* out_value) {
         if (empty()) {
             return false;
