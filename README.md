@@ -35,7 +35,7 @@ To compile and run this project, you need:
 In the terminal, at the project root, run:
 
 ```bash
-g++ main.cpp src/*.cpp -Iinclude -o hanoi
+g++ main.cpp -Iinclude -o hanoi
 ```
 
 ### Execution
@@ -71,7 +71,7 @@ The application implements the following requirements:
 ### Compile tests
 
 ```bash
-g++ tests/test.cpp src/*.cpp -Iinclude -o test
+g++ tests/test.cpp -Iinclude -o test
 ```
 
 ### Run tests
@@ -90,7 +90,7 @@ test.exe
 
 ## Notes
 
-* Each rod is represented using a Stack (either `std::stack` or a custom implementation)
+* Each rod is represented using a Stack (custom implementation)
 * The algorithm used is recursive, following the classic Tower of Hanoi logic
 * Make sure GCC is properly installed and added to your system PATH
 
