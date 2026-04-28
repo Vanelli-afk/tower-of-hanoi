@@ -28,19 +28,11 @@ To compile and run this project, you need:
 * Compatible operating system (Windows, Linux, or macOS)
 * Code editor or IDE (recommended: Visual Studio Code with C/C++ extension)
 
----
-
 ## Compilation and Execution
 
 ### Compile the main program
 
 In the terminal, at the project root, run:
-
-```bash
-g++ main.cpp -o hanoi
-```
-
-If the project uses files inside `src/` and `include/`, use:
 
 ```bash
 g++ main.cpp src/*.cpp -Iinclude -o hanoi
@@ -51,13 +43,13 @@ g++ main.cpp src/*.cpp -Iinclude -o hanoi
 On Linux/macOS:
 
 ```bash
-./program
+./hanoi
 ```
 
 On Windows:
 
 ```bash
-program.exe
+hanoi.exe
 ```
 
 ## Features
@@ -73,8 +65,6 @@ The application implements the following requirements:
   Move disk X from A to C
   A: [...]   B: [...]   C: [...]
   ```
-
----
 
 ## Tests
 
